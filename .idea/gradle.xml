@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/cart" />
+        <option name="gradleJvm" value="23" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/checkout" />
+        <option name="gradleJvm" value="23 (2)" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/checkout" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/inventory" />
+        <option name="gradleJvm" value="23 (2)" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/item" />
+        <option name="gradleJvm" value="23 (2)" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/item" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/order" />
+        <option name="gradleJvm" value="23 (2)" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/order" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/payment" />
+        <option name="gradleJvm" value="23 (2)" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/payment" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/shipping" />
+        <option name="gradleJvm" value="23 (2)" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/shipping" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

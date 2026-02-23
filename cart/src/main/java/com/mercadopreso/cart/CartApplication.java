@@ -1,13 +1,16 @@
-package com.mercadopreso.cart;
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Entity
+public class Cart {
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+	@Id
+	@GeneratedValue(strategy = GenerationType.UUID)
+	private String id;
 
-@SpringBootApplication
-public class CartApplication {
+	private String userId;
 
-	public static void main(String[] args) {
-		SpringApplication.run(CartApplication.class, args);
-	}
-
+	@ElementCollection
+	private List<String> itemIdList;
 }
