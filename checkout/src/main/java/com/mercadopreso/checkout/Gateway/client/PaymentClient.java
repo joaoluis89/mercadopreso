@@ -6,7 +6,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@FeignClient(name = "payment", url = "http://localhost:8081")
+@FeignClient(name = "payment", url = "http://10.33.55.1:8080")
 public interface PaymentClient {
 
     @PostMapping("/payment/pre-authorize")

@@ -4,3 +4,29 @@ spring:
 
 server:
   port: 8082
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
+resilience4j:
+  retry:
+    instances:
+      PaymentPreAuthorize:
+        exponential-backoff-multiplier: 2
+        enable-exponential-backoff: false
+        wait-duration: 1s
+        max-attempts: 10
+  circuitbreaker:
+    instances:
+      PaymentPreAuthorize:
+        failure-rate-threshold: 90.0
+        sliding-window-size: 5
+        wait-duration-in-open-state: 30s
+
+

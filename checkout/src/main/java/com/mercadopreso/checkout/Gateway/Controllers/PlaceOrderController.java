@@ -3,7 +3,7 @@ package com.mercadopreso.checkout.Gateway.Controllers;
 import com.mercadopreso.checkout.Gateway.Dtos.PaymentDto.PaymentRequestDto;
 import com.mercadopreso.checkout.Gateway.Dtos.PaymentDto.PaymentResponseDto;
 import com.mercadopreso.checkout.Gateway.Dtos.PlaceOrderDto.PlaceOrderRequestDto;
-import com.mercadopreso.checkout.Gateway.client.PaymentClient;
+import com.mercadopreso.checkout.Gateway.remoting.PaymentGateway;
 import com.mercadopreso.checkout.Services.PlaceOrderService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
@@ -19,7 +19,7 @@ import java.util.UUID;
 @RequestMapping("/place-order")
 public class PlaceOrderController {
     private final PlaceOrderService placeOrderService;
-    private final PaymentClient paymentClient;
+    private final PaymentGateway paymentGateway;
 
     @PostMapping
     public ResponseEntity<PaymentResponseDto> placeOrder(@RequestBody @Valid PlaceOrderRequestDto placeOrderRequestDto) {
@@ -33,7 +33,7 @@ public class PlaceOrderController {
 
     @GetMapping("/checkout-pre-authorize")
     public PaymentResponseDto preAuthorizePayment() {
-        PaymentResponseDto paymentResponseDto = paymentClient.preAuthorize(
+        PaymentResponseDto paymentResponseDto = paymentGateway.preAuthorize(
                 PaymentRequestDto.builder()
                         .type("CARTAO_CREDITO")
                         .gateway("PAGSEGURO")
